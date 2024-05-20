@@ -20,6 +20,7 @@ class Ra002 extends BaseController{
             $x["dtxuttp"] =$this->mut002->getData();
             $x["dtxtarif"] =$this->mtr002->getData();
             $x["dtxpegawai"] =$this->mpg003->getData();
+            $x["dtxpemilik"]=$this->mpu002->getData();
             return view("basis", $x);
             return view('filter_view');
         }else{return redirect()->to(BASEURLKU);}
@@ -267,5 +268,26 @@ class Ra002 extends BaseController{
         
     //     return $this->response->setJSON(['data' => $data]);
     // }  
+
+    public function getuttp(){
+        $pemilik = $this->request->getPost('pemilik');
+        $data['pemilik'] = $this->mut002->getDatap($pemilik);
+        return $this->response->setJSON($data);
+    }
+
+    public function getjenis(){
+        $uttp = $this->request->getGet('id_uttp');
+        $jenis = $this->mut002->getjenis($uttp);
+        $id_jenis = $jenis[0]->id_jenis;
+        $data['jenis'] = $this->mtr002->getjenis($id_jenis);
+        return $this->response->setJSON($data);
+    }    
+
+    public function getharga(){
+        $tarif = $this->request->getGet('id_tarif');
+        $sidang = $this->request->getGet('sidang');
+        $data['harga'] = $this->mtr002->getharga($tarif, $sidang);
+        return $this->response->setJSON($data);
+    }
     
 }

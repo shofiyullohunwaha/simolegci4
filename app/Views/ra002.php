@@ -75,31 +75,29 @@
             <div class="modal-body">
                 <div class="row">
                     <div class="form-group col-12 jedaobyek">
-                        <label>ID UTTP *</label>
-                        <select class="form-control formt select2" id="txtiduttp" style="width: 100%;">
+                        <label>Pemilik *</label>
+                        <select class="form-control formt select2" id="txtpemilik" style="width: 100%;">
                             <option value=''>Pilih jenis uttp</option>
                             <?php
-                                  if (is_array($dtxuttp) 
-                                  && count($dtxuttp) > 0) {
-                                      foreach ($dtxuttp as $z) {
-                                          echo "<option value='" . $z->id_uttp . "'>" . $z->merek . "</option>";
+                                  if (is_array($dtxpemilik) 
+                                  && count($dtxpemilik) > 0) {
+                                      foreach ($dtxpemilik as $z) {
+                                          echo "<option value='" . $z->id_pemilik . "'>" . $z->nama_pemilik . "</option>";
                                       }
                                   }
                                 ?>
                         </select>
                     </div>
                     <div class="form-group col-12 jedaobyek">
+                        <label>ID UTTP *</label>
+                        <select class="form-control formt select2" id="txtiduttp" style="width: 100%;">
+                            <option value=''>Pilih jenis uttp</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-12 jedaobyek">
                         <label>ID Tarif *</label>
                         <select class="form-control formt select2" id="txtidtarif" style="width: 100%;">
                             <option value=''>Pilih jenis Tarif uttp</option>
-                            <?php
-                                  if (is_array($dtxtarif) 
-                                  && count($dtxtarif) > 0) {
-                                      foreach ($dtxtarif as $z) {
-                                          echo "<option value='" . $z->id_tarif . "'>" . $z->kategori . "</option>";
-                                      }
-                                  }
-                                ?>
                         </select>
 
                     </div>
@@ -112,16 +110,15 @@
                         <label>Tempat Sidang *</label>
                         <select class="form-control forme select2" id="txttmptsidang" style="width: 100%;">
                             <option value=''>Pilih Salah Satu</option>
-                            <option value='Dikantor'>Dikantor</option>
-                            <option value='Diluar'>Diluar</option>
+                            <option value='harga_ditempat'>Dikantor</option>
+                            <option value='harga_diluar'>Diluar</option>
                         </select>
                     </div>
                     <div class="form-group col-6 jedaobyek">
                         <label>Harga *</label>
                         <div class="input-group-prepend">
                             <span class="input-group-text">Rp</span>
-                            <input type="number" class="form-control formt khusus_abjad" id="txtharga"
-                                placeholder="Masukkan Harga" autocomplete="off">
+                            <input type="text" class="form-control formt khusus_abjad" id="txtharga" placeholder="Harga Tera" autocomplete="off" readonly>
                         </div>
                     </div>
                     <div class="form-group col-6 jedaobyek">
@@ -886,4 +883,67 @@ $(document).ready(function() {
         filterData();
     });
 });
+
+$(document).ready(function() {
+    $('#txtpemilik').change(function() {
+        var pemilik = $(this).val();
+        $.ajax({
+            url: '<?= base_url('Ra002/getpem') ?>',
+            type: 'POST',
+            data: {
+                pemilik: pemilik
+            },
+            dataType: 'json',
+            success: function(response) {
+                $('#txtiduttp').empty();
+                $.each(response.pemilik, function(key, value) {
+                    $('#txtiduttp').append('<option value="' + value.id_uttp + '">' + value.merek + '</option>');
+                });
+            }
+        });
+    });
+});
+
+$(document).ready(function() {
+    $('#txtiduttp').change(function() {
+        var id_uttp = $(this).val();
+        $.ajax({
+            url: '<?= base_url('Ra002/jenis') ?>',
+            type: 'GET',
+            data: {
+                id_uttp: id_uttp
+            },
+            dataType: 'json',
+            success: function(response) {
+                $('#txtidtarif').empty();
+                $.each(response.jenis, function(key, value) {
+                    $('#txtidtarif').append('<option value="' + value.id_tarif + '">' + value.kategori + '</option>');
+                });
+            }
+        });
+    });
+});
+
+$(document).ready(function() {
+    $('#txtidtarif, #txttmptsidang').change(function() {
+        var id_tarif = $('#txtidtarif').val();
+        var tmptsidang = $('#txttmptsidang').val();
+        $.ajax({
+            url: '<?= base_url('Ra002/harga') ?>',
+            type: 'GET',
+            data: {
+                id_tarif: id_tarif,
+                sidang: tmptsidang
+            },
+            dataType: 'json',
+            success: function(response) {
+                $('#txtharga').empty();
+                $.each(response.harga, function(key, value) {
+                    $('#txtharga').val(value.harga_ditempat || value.harga_diluar);
+                });
+            }
+        });
+    });
+});
+
 </script>

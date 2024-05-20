@@ -232,6 +232,9 @@ $routes->group('Ra002', function($routes){
     $routes->post('edit', 'Ra002::update');
     $routes->post('hapus', 'Ra002::delete');
     $routes->post('reset', 'Ra002::reset');
+    $routes->post('getpem', 'Ra002::getuttp');
+    $routes->get('jenis', 'Ra002::getjenis');
+    $routes->get('harga', 'Ra002::getharga');
 });
 $routes->get('Pn002', 'Pn002::index');
 $routes->group('Pn002', function($routes){

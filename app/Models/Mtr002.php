@@ -7,6 +7,17 @@ class Mtr002 extends Model{
         $dt = db_connect()->query($sql);
         return $dt ? $dt->getResult() : 0;
     }
+    public function getjenis($jenis){
+        $sql = "SELECT * FROM tarif_uttp WHERE id_jenis = ?";
+        $dt = db_connect()->query($sql,[$jenis]);
+        return $dt ? $dt->getResult() : [];
+    }
+
+    public function getharga($tarif, $sidang){
+        $sql = "SELECT $sidang FROM tarif_uttp WHERE id_tarif = ?";
+        $dt = db_connect()->query($sql,[$tarif]);
+        return $dt ? $dt->getResult() : [];
+    }
     public function Filter($id_tarif){
         $sql = "SELECT * FROM tarif_uttp WHERE id_tarif = '$id_tarif' LIMIT 1";
         $dt = db_connect()->query($sql);
