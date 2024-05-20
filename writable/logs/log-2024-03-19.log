@@ -1,0 +1,10 @@
+ERROR - 2024-03-19 05:25:55 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') 
+                VALUES ('1710800755', 'andre', 'Perampuan', '08848884', '...' at line 1
+ERROR - 2024-03-19 20:12:53 --> Table 'ci4.jenis_uttp' doesn't exist
+ERROR - 2024-03-19 20:13:07 --> Table 'ci4.jenis_uttp' doesn't exist
+ERROR - 2024-03-19 20:17:52 --> Table 'ci4.jenis_uttp' doesn't exist
+ERROR - 2024-03-19 20:18:23 --> Table 'ci4.jenis_uttp' doesn't exist
+ERROR - 2024-03-19 20:18:31 --> Table 'ci4.jenis_uttp' doesn't exist
+ERROR - 2024-03-19 20:32:36 --> Duplicate entry '1' for key 'PRIMARY'
+ERROR - 2024-03-19 20:35:39 --> Duplicate entry '1' for key 'PRIMARY'
+ERROR - 2024-03-19 21:13:25 --> Duplicate entry '9' for key 'PRIMARY'

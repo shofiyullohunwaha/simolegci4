@@ -1,0 +1,6 @@
+ERROR - 2024-03-15 01:15:53 --> Unknown column 'id_pemilik' in 'where clause'
+ERROR - 2024-03-15 01:22:14 --> Unknown column 'desa' in 'field list'
+ERROR - 2024-03-15 01:59:13 --> Table 'ci4.pemilik_' doesn't exist
+ERROR - 2024-03-15 02:02:04 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '4a31c906a297f7f2569c02fbb4700e60', 'HJHJJH', 'C:\fakepath\provinces.csv', 'bb...' at line 2
+ERROR - 2024-03-15 18:35:57 --> The used SELECT statements have a different number of columns
+ERROR - 2024-03-15 18:36:00 --> The used SELECT statements have a different number of columns

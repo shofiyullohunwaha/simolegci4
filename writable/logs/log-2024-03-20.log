@@ -1,0 +1,10 @@
+ERROR - 2024-03-20 21:18:20 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '70.000.000, NOW(), '1586930688')' at line 2
+ERROR - 2024-03-20 21:19:52 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '70.000, NOW(), '1586930688')' at line 2
+ERROR - 2024-03-20 21:23:26 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '70.000, NOW(), '1586930688')' at line 2
+ERROR - 2024-03-20 21:25:07 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '75000, NOW(), '1586930688')' at line 2
+ERROR - 2024-03-20 21:26:15 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '7000, NOW(), '1586930688')' at line 2
+ERROR - 2024-03-20 21:28:31 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '7000, NOW(), '1586930688')' at line 2
+ERROR - 2024-03-20 23:20:06 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NOW(), id_update = '1586930688'
+                WHERE id_tarif = ''' at line 2
+ERROR - 2024-03-20 23:20:10 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NOW(), id_update = '1586930688'
+                WHERE id_tarif = ''' at line 2

@@ -1,0 +1,9 @@
+CRITICAL - 2024-03-10 19:42:13 --> Array to string conversion
+#0 C:\xampp\htdocs\ci4\app\Controllers\Pu002.php(116): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'C:\\xampp\\htdocs...', 116)
+#1 C:\xampp\htdocs\ci4\system\CodeIgniter.php(832): App\Controllers\Pu002->delete()
+#2 C:\xampp\htdocs\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pu002))
+#3 C:\xampp\htdocs\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ci4\index.php(39): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2024-03-10 22:26:49 --> Unknown column 'id_pegawai' in 'field list'
+ERROR - 2024-03-10 22:29:45 --> Unknown column 'id_pegawai' in 'field list'

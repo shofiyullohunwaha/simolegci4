@@ -1,0 +1,9 @@
+ERROR - 2024-03-29 14:01:17 --> Table 'ci4.pengawas' doesn't exist
+ERROR - 2024-03-29 14:02:05 --> Table 'ci4.pengawas' doesn't exist
+ERROR - 2024-03-29 14:02:29 --> Table 'ci4.pengawas' doesn't exist
+ERROR - 2024-03-29 14:04:59 --> Table 'ci4.pengawas' doesn't exist
+ERROR - 2024-03-29 14:05:57 --> Table 'ci4.pengawas' doesn't exist
+ERROR - 2024-03-29 14:07:25 --> Table 'ci4.pengawas' doesn't exist
+ERROR - 2024-03-29 14:11:56 --> Table 'ci4.pengawas' doesn't exist
+ERROR - 2024-03-29 14:12:54 --> Table 'ci4.pengawas' doesn't exist
+ERROR - 2024-03-29 16:05:15 --> Column count doesn't match value count at row 1

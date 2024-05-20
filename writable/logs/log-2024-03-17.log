@@ -1,0 +1,8 @@
+ERROR - 2024-03-17 15:40:05 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ORDER nama BY pu.id_pemilik' at line 1
+ERROR - 2024-03-17 15:49:22 --> Unknown column 'desa' in 'field list'
+ERROR - 2024-03-17 15:50:13 --> Unknown column 'desa' in 'field list'
+ERROR - 2024-03-17 15:54:32 --> Unknown column 'desa' in 'field list'
+ERROR - 2024-03-17 15:55:49 --> Unknown column 'desa' in 'field list'
+ERROR - 2024-03-17 20:55:10 --> Duplicate entry '' for key 'PRIMARY'
+ERROR - 2024-03-17 20:58:04 --> Duplicate entry '1710682828' for key 'PRIMARY'
+ERROR - 2024-03-17 21:06:54 --> Duplicate entry '1710682828' for key 'PRIMARY'

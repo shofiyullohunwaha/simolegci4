@@ -1,0 +1,21 @@
+ERROR - 2024-05-18 00:45:35 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' NOW(), '1586930688')' at line 2
+ERROR - 2024-05-18 00:48:39 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' NOW(), '1586930688')' at line 2
+ERROR - 2024-05-18 00:58:46 --> Unknown column 'id_akun' in 'field list'
+ERROR - 2024-05-18 01:00:14 --> Unknown column 'Belum' in 'field list'
+ERROR - 2024-05-18 01:09:43 --> Unknown column 'id_akun' in 'field list'
+ERROR - 2024-05-18 01:11:34 --> Unknown column 'Sudah' in 'field list'
+ERROR - 2024-05-18 01:15:13 --> Unknown column 'Sudah' in 'field list'
+ERROR - 2024-05-18 01:22:18 --> Unknown column 'Sudah' in 'field list'
+ERROR - 2024-05-18 01:26:25 --> Unknown column 'Sudah' in 'field list'
+ERROR - 2024-05-18 09:19:47 --> Unknown column 'id_akun' in 'field list'
+ERROR - 2024-05-18 09:20:04 --> Unknown column 'id_akun' in 'field list'
+ERROR - 2024-05-18 09:25:18 --> Unknown column 'id_akun' in 'field list'
+ERROR - 2024-05-18 09:33:33 --> Column 'id_buat' cannot be null
+ERROR - 2024-05-18 09:34:30 --> Column 'id_buat' cannot be null
+ERROR - 2024-05-18 09:51:18 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') 
+                VALUES ('1716000678', 'KLS-0000001', 'GIREET', 'HHJ89WW',...' at line 1
+ERROR - 2024-05-18 13:00:12 --> Error connecting to the database: No connection could be made because the target machine actively refused it
+ERROR - 2024-05-18 22:28:05 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '? ORDER BY id_uttpSELECT pu.*, d.nama AS nama FROM uttp AS pu LEFT JOIN jenis...' at line 1
+ERROR - 2024-05-18 22:28:06 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '? ORDER BY id_uttpSELECT pu.*, d.nama AS nama FROM uttp AS pu LEFT JOIN jenis...' at line 1
+ERROR - 2024-05-18 22:29:41 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '? ORDER BY id_uttpSELECT pu.*, d.nama AS nama FROM uttp AS pu LEFT JOIN jenis...' at line 1
+ERROR - 2024-05-18 22:29:41 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '? ORDER BY id_uttpSELECT pu.*, d.nama AS nama FROM uttp AS pu LEFT JOIN jenis...' at line 1

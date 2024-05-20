@@ -1,0 +1,6 @@
+ERROR - 2024-03-22 22:31:29 --> MySQL server has gone away
+ERROR - 2024-03-22 22:56:31 --> Unknown column 'a.id_level' in 'on clause'
+ERROR - 2024-03-22 22:56:35 --> Unknown column 'a.id_level' in 'on clause'
+ERROR - 2024-03-22 22:56:50 --> Unknown column 'a.id_level' in 'on clause'
+ERROR - 2024-03-22 22:57:39 --> Unknown column 'a.id_level' in 'on clause'
+ERROR - 2024-03-22 22:58:15 --> Unknown column 'a.id_level' in 'on clause'

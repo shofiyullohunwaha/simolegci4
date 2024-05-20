@@ -1,0 +1,1 @@
+ERROR - 2024-03-13 16:57:33 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'id_level='000', status='Y', tgl_update=NOW(), id_update='1586930688' WHERE id...' at line 1

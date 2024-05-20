@@ -1,0 +1,3 @@
+ERROR - 2024-05-20 21:59:56 --> Unknown column 'p.nama' in 'field list'
+ERROR - 2024-05-20 22:50:56 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE pu.tgl_sidang BETWEEN '2024-05-05' AND '2024-05-07'
+        ORDER BY p...' at line 2

@@ -1,0 +1,17 @@
+ERROR - 2024-03-24 15:34:09 --> Error connecting to the database: No connection could be made because the target machine actively refused it
+ERROR - 2024-03-24 15:51:31 --> Unknown column 'koofisen' in 'field list'
+ERROR - 2024-03-24 15:51:43 --> Unknown column 'koofisen' in 'field list'
+ERROR - 2024-03-24 16:00:34 --> Unknown column 'sedah_tera' in 'field list'
+ERROR - 2024-03-24 16:04:41 --> Unknown column 'id_tarif' in 'where clause'
+ERROR - 2024-03-24 16:14:41 --> Column count doesn't match value count at row 1
+ERROR - 2024-03-24 16:14:44 --> Column count doesn't match value count at row 1
+ERROR - 2024-03-24 16:14:47 --> Column count doesn't match value count at row 1
+ERROR - 2024-03-24 16:14:51 --> Column count doesn't match value count at row 1
+ERROR - 2024-03-24 16:14:59 --> Column count doesn't match value count at row 1
+ERROR - 2024-03-24 16:20:48 --> Column count doesn't match value count at row 1
+ERROR - 2024-03-24 16:22:06 --> Column count doesn't match value count at row 1
+ERROR - 2024-03-24 16:23:49 --> Column count doesn't match value count at row 1
+ERROR - 2024-03-24 16:28:20 --> Column count doesn't match value count at row 1
+ERROR - 2024-03-24 16:32:42 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') 
+                VALUES ('1711272762', 'KLS-0000001', 'coba', '09COBA', '9...' at line 1
+ERROR - 2024-03-24 16:34:35 --> Column count doesn't match value count at row 1

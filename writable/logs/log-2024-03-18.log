@@ -1,0 +1,5 @@
+ERROR - 2024-03-18 03:55:36 --> Unknown column 'nama' in 'field list'
+ERROR - 2024-03-18 03:57:05 --> Unknown column 'idlogin' in 'field list'
+ERROR - 2024-03-18 16:34:49 --> Unknown column 'id_login' in 'field list'
+ERROR - 2024-03-18 16:34:50 --> Unknown column 'id_login' in 'field list'
+ERROR - 2024-03-18 16:39:35 --> Unknown column 'id_login' in 'field list'

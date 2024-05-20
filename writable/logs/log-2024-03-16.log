@@ -1,0 +1,10 @@
+ERROR - 2024-03-16 21:00:54 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '0000-00-00','1586930688')' at line 2
+ERROR - 2024-03-16 21:02:37 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '0000-00-00','1586930688')' at line 2
+ERROR - 2024-03-16 21:44:27 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '1586930688')' at line 2
+ERROR - 2024-03-16 21:45:23 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '1586930688')' at line 2
+ERROR - 2024-03-16 21:48:48 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '='nama',nama_usaha='nama', izin_pabrik='',narahubung='C:\fakepath\.htaccess',...' at line 1
+ERROR - 2024-03-16 21:54:28 --> Unknown column 'desa' in 'field list'
+ERROR - 2024-03-16 21:55:04 --> Unknown column 'desa' in 'field list'
+ERROR - 2024-03-16 21:59:57 --> Unknown column 'desa' in 'field list'
+ERROR - 2024-03-16 22:14:13 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' narahubung, izin_pabrik, id_desa, email, no_telpon, tgl_buat, id_buat) 
+   ...' at line 1

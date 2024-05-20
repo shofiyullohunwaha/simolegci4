@@ -1,0 +1,42 @@
+ERROR - 2024-03-14 15:36:43 --> Column count doesn't match value count at row 1
+ERROR - 2024-03-14 15:39:04 --> Unknown column 'tgl_update' in 'field list'
+ERROR - 2024-03-14 15:43:18 --> Unknown column 'tgl_update' in 'field list'
+ERROR - 2024-03-14 15:46:58 --> Unknown column 'created_at' in 'field list'
+ERROR - 2024-03-14 15:57:18 --> Unknown column 'tgl_update' in 'field list'
+ERROR - 2024-03-14 15:57:31 --> Unknown column 'tgl_update' in 'field list'
+ERROR - 2024-03-14 15:58:37 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') 
+                VALUES ('333', 'vfvfvfv','1586930688')' at line 1
+ERROR - 2024-03-14 16:00:13 --> Unknown column 'tgl_update' in 'field list'
+ERROR - 2024-03-14 16:01:24 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') 
+                VALUES ('333', 'kosforor', '1586930688')' at line 1
+ERROR - 2024-03-14 16:03:11 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') 
+                VALUES ('333', 'ffff','1586930688')' at line 1
+ERROR - 2024-03-14 16:04:56 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') 
+                VALUES ('95', 'CHINA','1586930688')' at line 1
+ERROR - 2024-03-14 16:08:55 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') 
+                VALUES ('95', 'CHINA', '1586930688')' at line 1
+ERROR - 2024-03-14 16:10:30 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') 
+                VALUES ('3444', 'GGGG', '1586930688')' at line 1
+ERROR - 2024-03-14 16:12:25 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') 
+                VALUES ('99', 'HIHIHI', '1586930688')' at line 1
+ERROR - 2024-03-14 16:16:25 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') 
+                VALUES ('5555', 'TTT', '1586930688')' at line 1
+ERROR - 2024-03-14 16:17:22 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') 
+                VALUES ('', 'gghaghgd', '1586930688')' at line 1
+ERROR - 2024-03-14 16:18:59 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') 
+                VALUES ('333', 'TTTT', '1586930688')' at line 1
+ERROR - 2024-03-14 16:19:46 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') 
+                VALUES ('333', 'TTTT', '1586930688')' at line 1
+ERROR - 2024-03-14 16:42:49 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') 
+                VALUES ('99', 'AMERIKA', '1586930688')' at line 1
+ERROR - 2024-03-14 16:44:43 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') 
+                VALUES ('999', 'jongol', '1586930688')' at line 1
+ERROR - 2024-03-14 16:46:34 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') 
+                VALUES ('333', 'dfdfrrfr', '1586930688')' at line 1
+ERROR - 2024-03-14 18:31:41 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE id_provinsi=''' at line 1
+ERROR - 2024-03-14 20:19:43 --> Unknown column 'id_kab' in 'order clause'
+ERROR - 2024-03-14 20:21:17 --> Unknown column 'id_kab' in 'order clause'
+ERROR - 2024-03-14 20:22:18 --> Table 'ci4.kabupaten' doesn't exist
+ERROR - 2024-03-14 21:39:02 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'id_level='000', status='Y', tgl_update=NOW(), id_update='1586930688' WHERE id...' at line 1
+ERROR - 2024-03-14 21:40:19 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'id_level='000', status='Y', tgl_update=NOW(), id_update='1586930688' WHERE id...' at line 1
+ERROR - 2024-03-14 21:43:01 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'id_level='000', status='Y', tgl_update=NOW(), id_update='1586930688' WHERE id...' at line 1
