@@ -222,6 +222,7 @@ $routes->group('Va002', function($routes){
     $routes->post('edit', 'Va002::update');
     $routes->post('hapus', 'Va002::delete');
     $routes->post('reset', 'Va002::reset');
+    $routes->get('uttp', 'Va002::gettera');
 });
 $routes->get('Ra002', 'Ra002::index');
 $routes->group('Ra002', function($routes){

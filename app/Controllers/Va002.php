@@ -17,6 +17,8 @@ class Va002 extends BaseController{
             $x["ids"] = $this->hasilc[5];
             $x["idf"] = $this->hasilc[6];
             $x["hal"] = $this->hasilc[7];
+            $x["dtxpemilik"]=$this->mpu002->getData();
+            $x['dtxtera'] = $this->mra002->teraku();
             return view("basis", $x);
         }else{return redirect()->to(BASEURLKU);}
     }
@@ -165,6 +167,13 @@ class Va002 extends BaseController{
         } else {
             echo base64_encode('{"kode":"00","pesan":"Anda Tidak Memiliki Hak Akses Update Data Pada Form Ini"}');
         }
+    }
+
+    public function gettera(){
+        // $tera = [1716221374];
+        $tera = $this->request->getGet('id_tera');
+        $date['tera'] = $this->mra002->hteraku($tera);
+        return $this->response->setJSON($date);
     }
     
 }

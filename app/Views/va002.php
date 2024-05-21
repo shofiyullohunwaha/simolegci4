@@ -52,9 +52,32 @@
             <div class="modal-body">
                 <div class="row">
                     <div class="form-group col-6 jedaobyek">
+                        <label>Pemilik *</label>
+                        <select class="form-control formt select2" id="txtpemilik" style="width: 100%;">
+                            <option value=''>Pilih Pemilik</option>
+                            <?php
+                                  if (is_array($dtxpemilik) 
+                                  && count($dtxpemilik) > 0) {
+                                      foreach ($dtxpemilik as $z) {
+                                          echo "<option value='" . $z->id_pemilik . "'>" . $z->nama_pemilik . "</option>";
+                                      }
+                                  }
+                                ?>
+                        </select>
+                    </div>
+                    <div class="form-group col-6 jedaobyek">
                         <label>Tagihan*</label>
-                        <input type="text" class="form-control forme khusus_abjad" id="txttagihan"
-                            placeholder=" Masukan Tagihan" autocomplete="off">
+                        <select class="form-control formt select2" id="txttagihan" style="width: 100%;"
+                            multiple="multiple">
+                            <?php
+                                if (is_array($dtxtera) 
+                                  && count($dtxtera) > 0) {
+                                      foreach ($dtxtera as $z) {
+                                          echo "<option value='" . $z->id_tera . "'>" . $z->kategori . "</option>";
+                                  }
+                              }
+                            ?>
+                        </select>
                     </div>
                     <div class="form-group col-6 jedaobyek">
                         <label>Total*</label>

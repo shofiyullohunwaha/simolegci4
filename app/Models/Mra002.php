@@ -43,4 +43,16 @@ class Mra002 extends Model{
         $dt = db_connect()->query($sql);
         return $dt ? $dt->getResult() : [];
     }
+
+    public function teraku(){
+        $sql = "SELECT * FROM tera";
+        $dt = db_connect()->query($sql);
+        return $dt ? $dt->getResult() : [];
+    }
+
+    public function hteraku($id_tera){
+        $sql = "SELECT * FROM tera WHERE id_tera = ?";
+        $dt = db_connect()->query($sql, [$id_tera]);
+        return $dt ? $dt->getResult() : [];
+    }
 }

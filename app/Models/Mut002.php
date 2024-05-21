@@ -19,7 +19,7 @@ class Mut002 extends Model{
         $dt = db_connect()->query($sql, [$id_uttp]);
         return $dt ? $dt->getResult() : 0;
     }
-    
+
     public function Filter($id_uttp){
         $sql = "SELECT * FROM uttp WHERE id_uttp = '$id_uttp' LIMIT 1";
         $dt = db_connect()->query($sql);
