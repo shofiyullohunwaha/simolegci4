@@ -82,16 +82,17 @@ class Va002 extends BaseController{
     public function add(){
         if(strpos($this->aksesc, "001") !== false){
             $id_va = kodeotomatis1();
+            $pemilik = antiSQLi($this->request->getVar("id_pemilik")); // Fix typo: id_pemilil to id_pemilik
             $tagihan = antiSQLi($this->request->getVar("tagihan"));
             $total = antiSQLi($this->request->getVar("total"));
             $tgl_bayar = antiSQLi($this->request->getVar("tgl_bayar"));
             $channel = antiSQLi($this->request->getVar("channel"));
             $ref = antiSQLi($this->request->getVar("ref"));
-            
-            $opr = $this->mva002->Add($id_va, $tagihan, $total, $tgl_bayar, $channel, $ref, IdLogin());
+    
+            $opr = $this->mva002->Add($id_va, $pemilik, $tagihan, $total, $tgl_bayar, $channel, $ref, IdLogin());
             if($opr == "1"){
                 // Log the addition operation
-                $ket = "ID VA: $id_va,\nTagihan: $tagihan,\nTotal: $total,\nTanggal Bayar: $tgl_bayar,\nChannel: $channel,\nRef: $ref";
+                $ket = "ID VA: $id_va,\nPemilik: $pemilik \nTagihan: $tagihan,\nTotal: $total,\nTanggal Bayar: $tgl_bayar,\nChannel: $channel,\nRef: $ref";
                 $this->mlog->LogHistory("UTTP", "Tambah", $ket, IdLogin(), kodeotomatis2());
                 echo base64_encode('{"kode":"01","pesan":"Data VA Berhasil ditambahkan"}');
             } else {
@@ -101,6 +102,7 @@ class Va002 extends BaseController{
             echo base64_encode('{"kode":"00","pesan":"Anda tidak memiliki hak akses untuk menambahkan data pada form ini"}');
         }
     }
+    
     
 
     public function delete() {
@@ -170,8 +172,8 @@ class Va002 extends BaseController{
     }
 
     public function gettera(){
-        // $tera = [1716221374];
-        $tera = $this->request->getGet('id_tera');
+        // $tera = ['1716220522', '1716221374'];
+        $tera = $this->request->getGet('id_teras');
         $date['tera'] = $this->mra002->hteraku($tera);
         return $this->response->setJSON($date);
     }

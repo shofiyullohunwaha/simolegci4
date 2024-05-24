@@ -115,11 +115,12 @@
                         </select>
                     </div>
                     <div class="form-group col-6 jedaobyek">
-                        <label>Harga *</label>
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">Rp</span>
-                            <input type="text" class="form-control formt khusus_abjad" id="txtharga" placeholder="Harga Tera" autocomplete="off" readonly>
-                        </div>
+                        <label>SKKHP *</label>
+                        <select class="form-control forme select2" id="txtskkhp" style="width: 100%;">
+                            <option value=''>Pilih Salah Satu</option>
+                            <option value='Ya'>Ya</option>
+                            <option value='Tidak'>Tidak</option>
+                        </select>
                     </div>
                     <div class="form-group col-6 jedaobyek">
                         <label>Petugas *</label>
@@ -154,21 +155,10 @@
                             placeholder="Masukkan Alasan" autocomplete="off">
                     </div>
                     <div class="form-group col-6 jedaobyek">
-                        <label>SKKHP *</label>
-                        <select class="form-control forme select2" id="txtskkhp" style="width: 100%;">
-                            <option value=''>Pilih Salah Satu</option>
-                            <option value='Ya'>Ya</option>
-                            <option value='Tidak'>Tidak</option>
-                        </select>
-                    </div>
-                    <div class="form-group col-6 jedaobyek">
-                        <label>Harga SKHP *</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">Rp</span>
-                            </div>
-                            <input type="number" class="form-control formt khusus_abjad" id="txthargaskhp"
-                                placeholder="Masukkan Harga SKHP" autocomplete="off">
+                        <label>Harga *</label>
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Rp</span>
+                            <input type="text" class="form-control formt khusus_abjad" id="txtharga" placeholder="Harga Tera" autocomplete="off" readonly>
                         </div>
                     </div>
                     <div class="form-group col-6 jedaobyek">
@@ -928,6 +918,11 @@ $(document).ready(function() {
     $('#txtidtarif, #txttmptsidang').change(function() {
         var id_tarif = $('#txtidtarif').val();
         var tmptsidang = $('#txttmptsidang').val();
+        var skkhp = $('#txtskkhp').val();
+        var additionalPrice = 0;
+        if (skkhp === 'Ya') {
+            additionalPrice = 5000;
+        }
         $.ajax({
             url: '<?= base_url('Ra002/harga') ?>',
             type: 'GET',
@@ -939,7 +934,10 @@ $(document).ready(function() {
             success: function(response) {
                 $('#txtharga').empty();
                 $.each(response.harga, function(key, value) {
-                    $('#txtharga').val(value.harga_ditempat || value.harga_diluar);
+                    var harga = value.harga_ditempat || value.harga_diluar;
+                    harga = parseFloat(harga) || 0;
+                    harga += additionalPrice;
+                    $('#txtharga').val(harga);
                 });
             }
         });

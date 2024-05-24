@@ -42,6 +42,8 @@ $routes->get('beranda', 'Dashboard::index');
 $routes->post('updateprofil', 'Dashboard::updateprofil_upload');
 $routes->post('updateprofil2', 'Dashboard::updateprofil');
 $routes->post('hapusfoto', 'Dashboard::hapusfotoprofil');
+$routes->get('ambil/(:any)/(:any)', 'Sistem::cek/$1/$2');
+
 //------------------------------------------------------------
 $routes->get('001', 'Basis::x001');
 $routes->get('002', 'Basis::x002');

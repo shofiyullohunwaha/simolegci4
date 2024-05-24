@@ -38,6 +38,12 @@ class Mpg003 extends Model{
         $dt = db_connect()->query($sql);
         return $dt ? $dt->getResult() : 0;
     }
+
+    public function getpegawai($id_pegawai){
+        $sql = "SELECT * FROM pegawai WHERE id_pegawai = $id_pegawai";
+        $dt = db_connect()->query($sql);
+        return $dt ? $dt->getResult() : 0;
+    }
   
     
 }

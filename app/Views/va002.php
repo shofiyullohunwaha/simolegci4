@@ -81,12 +81,14 @@
                     </div>
                     <div class="form-group col-6 jedaobyek">
                         <label>Total*</label>
-                        <input type="text" class="form-control forme" id="txttotal" placeholder="Masukan Type model"
-                            autocomplete="off">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Rp</span>
+                            <input type="text" class="form-control formt khusus_abjad" id="txttotal" placeholder="Jumlah Harga" autocomplete="off" readonly>
+                        </div>
                     </div>
                     <div class="form-group col-6 jedaobyek">
                         <label>Tanggal Bayar*</label>
-                        <input type="text" class="form-control forme khusus_abjad" id="txttgl"
+                        <input type="date" class="form-control forme khusus_abjad" id="txttgl"
                             placeholder="Masukkan Nomer Seri Alat" autocomplete="off">
                     </div>
                     <div class="form-group col-6 jedaobyek">
@@ -130,7 +132,7 @@
                     </div>
                     <div class="form-group col-6 jedaobyek">
                         <label>Total*</label>
-                        <input type="text" class="form-control forme" id="txttotale" placeholder="Masukan Type model"
+                        <input type="text" class="form-control forme" id="txttotal" placeholder="Masukan Type model"
                             autocomplete="off">
                     </div>
                     <div class="form-group col-6 jedaobyek">
@@ -206,6 +208,25 @@ function reset() {
 }
 
 function tambah() {
+    $("#btnbatal").attr("disabled", true);
+    $("#btntambah").attr("disabled", true);
+    let pemilik = $("#txtidpemilik").val();
+    let id_tagihan = $("#txttagihan").val();
+    let total = $("#txttotal").val();
+    let tgl_bayar = $("#txttgl").val();
+    let channel = $("#txtchannel").val();
+    let ref = $("#txtref").val();
+
+    if (pemilik == "" || id_tagihan == "" || total == "" || tgl_bayar == "" || channel == "" || ref == "") {
+        swal({
+            title: 'Gagal',
+            text: 'Ada isian yang masih kosong!',
+            icon: 'error',
+        });
+        $("#btnbatal").attr("disabled", false);
+        $("#btntambah").attr("disabled", false);
+        return;
+    }
     swal({
         text: "Proses tambah...",
         icon: iconpreloader,
@@ -218,8 +239,8 @@ function tambah() {
         url: "<?= BASEURLKU.ucfirst($idf); ?>/tambah",
         method: "POST",
         data: {
-            id_va: id_va,
-            tagihan: tagihan,
+            id_pemilik: pemilik,
+            tagihan: id_tagihan,
             total: total,
             tgl_bayar: tgl_bayar,
             channel: channel,
@@ -229,23 +250,31 @@ function tambah() {
         timeout: ajaxtimeout,
         success: function(respon) {
             swal.close();
-            let data = JSON.parse(atob(respon));
-            if (data.kode == "01") {
+            try {
+                let data = JSON.parse(atob(respon));
+                if (data.kode == "01") {
+                    swal({
+                        title: "Berhasil",
+                        text: data.pesan,
+                        icon: "success"
+                    }).then((Ok) => {
+                        if (Ok) {
+                            tabel.ajax.reload(null, false);
+                            reset();
+                            $("#modaltambah").modal("hide");
+                        }
+                    });
+                } else {
+                    swal({
+                        title: "Gagal",
+                        text: data.pesan,
+                        icon: "error"
+                    });
+                }
+            } catch (e) {
                 swal({
-                    title: "Berhasil",
-                    text: data.pesan,
-                    icon: "success"
-                }).then((Ok) => {
-                    if (Ok) {
-                        tabel.ajax.reload(null, false);
-                        reset();
-                        $("#modaltambah").modal("hide");
-                    }
-                });
-            } else {
-                swal({
-                    title: "Gagal",
-                    text: data.pesan,
+                    title: "Error",
+                    text: "Terjadi kesalahan saat memproses respon dari server.",
                     icon: "error"
                 });
             }
@@ -264,4 +293,32 @@ function tambah() {
         }
     });
 }
+
+
+$(document).ready(function() {
+    $('#txttagihan').change(function() {
+        var selectedIds = $(this).val();
+        console.log(selectedIds);
+            $.ajax({
+                url: '<?= BASEURLKU.ucfirst($idf); ?>/uttp',
+                type: 'GET',
+                data: {
+                    id_teras: selectedIds,
+                },
+                dataType: 'json',
+                success: function(response) {
+                    console.log(response);
+                    $('#txttotale').empty();
+                    $.each(response.tera, function(key, item) {
+                        var hargatera = item.harga;
+                        $('#txttotal').val(hargatera);
+                    })
+                },
+                error: function() {
+                    $('#txttotal').val(''); // Atau atur ke nilai default yang sesuai
+                }
+            });
+    });
+});
+
 </script>

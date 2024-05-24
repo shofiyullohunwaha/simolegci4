@@ -12,9 +12,9 @@ class Mva002 extends Model{
         $dt = db_connect()->query($sql);
         return $dt ? $dt->getResult() : 0;
     }
-    public function Add($id_va, $tagihan, $total, $tgl_bayar, $channel, $ref, $idlogin){
-        $sql = "INSERT INTO va (id_va, tagihan, total, tgl_bayar, channel, ref, tgl_buat, id_buat) 
-                VALUES ('$id_va', '$tagihan', '$total', '$tgl_bayar', '$channel', '$ref', NOW(), '$idlogin')";
+    public function Add($id_va, $pemilik, $tagihan, $total, $tgl_bayar, $channel, $ref, $idlogin){
+        $sql = "INSERT INTO va (id_va, id_pemilik, tagihan, total, tgl_bayar, channel, ref, tgl_buat, id_buat) 
+                VALUES ('$id_va','$pemilik', '$tagihan', '$total', '$tgl_bayar', '$channel', '$ref', NOW(), '$idlogin')";
         $dt = db_connect()->query($sql);
         return $dt ? "1" : "0";
     }

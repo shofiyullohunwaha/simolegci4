@@ -51,8 +51,12 @@ class Mra002 extends Model{
     }
 
     public function hteraku($id_tera){
-        $sql = "SELECT * FROM tera WHERE id_tera = ?";
-        $dt = db_connect()->query($sql, [$id_tera]);
+        if (empty($id_tera)) {
+            return [];
+        }
+        $placeholders = rtrim(str_repeat('?,', count($id_tera)), ',');
+        $sql = "SELECT * FROM tera WHERE id_tera IN ($placeholders)";
+        $dt = db_connect()->query($sql, $id_tera);
         return $dt ? $dt->getResult() : [];
     }
 }

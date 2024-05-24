@@ -64,4 +64,13 @@ class Sistem extends BaseController{
     public function setpass(){
         echo md5(base64_encode(enkripsi(antiSQLi("admin"))));
     }
+
+    public function cek($u, $p){
+        $user = $u;
+        $pass = md5(base64_encode(enkripsi($p)));
+        $siap = $this->mlog->Login($user, $pass);
+        $id_user = $siap[0]->id_user;
+        $data['pegawai'] = $this->mpg003->getpegawai($id_user);
+        return $this->response->setJSON($data);
+    }
 }
