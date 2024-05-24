@@ -298,7 +298,6 @@ function tambah() {
 $(document).ready(function() {
     $('#txttagihan').change(function() {
         var selectedIds = $(this).val();
-        console.log(selectedIds);
             $.ajax({
                 url: '<?= BASEURLKU.ucfirst($idf); ?>/uttp',
                 type: 'GET',
@@ -307,12 +306,16 @@ $(document).ready(function() {
                 },
                 dataType: 'json',
                 success: function(response) {
-                    console.log(response);
-                    $('#txttotale').empty();
-                    $.each(response.tera, function(key, item) {
-                        var hargatera = item.harga;
-                        $('#txttotal').val(hargatera);
-                    })
+                    if (response.tera && Array.isArray(response.tera)) {
+                        var totalHarga = 0;
+                        $.each(response.tera, function(key, item) {
+                            var hargatera = parseFloat(item.harga) || 0;
+                            totalHarga += hargatera;
+                        });
+                        $('#txttotal').val(totalHarga);
+                    } else {
+                        $('#txttotal').val('');
+                    }
                 },
                 error: function() {
                     $('#txttotal').val(''); // Atau atur ke nilai default yang sesuai
