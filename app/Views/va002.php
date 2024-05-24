@@ -308,10 +308,12 @@ $(document).ready(function() {
                 dataType: 'json',
                 success: function(response) {
                     console.log(response);
+                    var totalHarga = 0;
                     $('#txttotale').empty();
                     $.each(response.tera, function(key, item) {
-                        var hargatera = item.harga;
-                        $('#txttotal').val(hargatera);
+                        var hargatera = parseFloat(item.harga) || 0;
+                        totalHarga += hargatera;
+                        $('#txttotal').val(totalHarga);
                     })
                 },
                 error: function() {
