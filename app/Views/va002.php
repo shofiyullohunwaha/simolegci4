@@ -298,7 +298,6 @@ function tambah() {
 $(document).ready(function() {
     $('#txttagihan').change(function() {
         var selectedIds = $(this).val();
-        console.log(selectedIds);
             $.ajax({
                 url: '<?= BASEURLKU.ucfirst($idf); ?>/uttp',
                 type: 'GET',
@@ -307,7 +306,6 @@ $(document).ready(function() {
                 },
                 dataType: 'json',
                 success: function(response) {
-                    console.log(response);
                     if (response.tera && Array.isArray(response.tera)) {
                         var totalHarga = 0;
                         $.each(response.tera, function(key, item) {
